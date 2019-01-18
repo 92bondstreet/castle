@@ -103,7 +103,7 @@ Help me with a Web Application
 
 ---
 
-🎯 Find the best rates for each Weekend for France located Relais & Châteaux
+🎯 List the best rates for each Weekend for France located Relais & Châteaux
 
 
 ---
@@ -293,5 +293,3 @@ For each Weekend, list best rates for France located Relais & Châteaux with ⭐
 ---
 
 * Commit early, commit often, push often
-
----

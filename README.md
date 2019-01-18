@@ -33,11 +33,11 @@
 
 ## 🎯 Objectives
 
-**Find the best rates for each Weekend for France located Relais & Châteaux**
+**List the best rates for each Weekend for France located Relais & Châteaux**
 
 ## 🏃‍♀️ Steps to do
 
-By creating a link between [relaischateaux.com](https://www.relaischateaux.com), [restaurant.michelin.fr](https://restaurant.michelin.fr/) and the end-user.
+Create a connection between [relaischateaux.com](https://www.relaischateaux.com), [restaurant.michelin.fr](https://restaurant.michelin.fr/) and the end-user.
 
 ### Stack
 
@@ -63,7 +63,7 @@ Node.js + React + Material Design (mdl, bootstrap, foundation...) + ES6 [+ docke
 1. commit your different modifications:
 
 ```sh
-❯ cd /path/to/workspace/dress-up-privateaser
+❯ cd /path/to/workspace/castle
 ❯ git add -A && git commit -m "feat(michelin): get list of starred restaurants"
 ```
 
@@ -96,6 +96,7 @@ Some things to do:
 
 1. Browse the website
 1. Check how that you can get list of hotels: api etc.... (check network activity)
+1. Check how that you can get list of restaurants for a given hotel: api etc.... (check network activity)
 1. define the JSON schema for Hotel
 
 etc ...
@@ -112,7 +113,9 @@ Some things to do:
 
 1. Browse the website
 1. define the JSON schema for a restaurant
-1. ...
+1. Check how that you can get list of starred restaurants: api etc.... (check network activity)
+
+etc...
 
 Example of Restaurant: https://restaurant.michelin.fr/2akhln2/lauberge-des-glazicks-plomodiern
 
@@ -121,13 +124,13 @@ Example of Restaurant: https://restaurant.michelin.fr/2akhln2/lauberge-des-glazi
 
 Some things to do:
 
-1. How to create a link between Relais & Châteaux and the starred restaurant?
+1. How to create a connection between Relais & Châteaux and the starred restaurant?
 
 ### Server-side with Node.js
 
 #### require('castle')
 
-Create a module called `castle` that returns the list of best rate for all Weekends for each Hotel
+Create a module called `castle` that returns the list of best rates for all Weekends for each Hotel
 
 ```js
 const castle = require('castle');
@@ -135,15 +138,17 @@ const castle = require('castle');
 const restaurant = {...};
 
 
-castle.getHotels();
-castle.getPrices(restaurant);
+const hotels = castle.getHotels();
+const prices = castle.getPrices(restaurant);
+
+...
 ```
 
 Some things to do:
 
 1. create the calls (api, http) to get the hotel page
+1. get the restaurants name (by scraping or decoding api response)
 1. check if the restaurant is starred.
-1. get the restaurant name (by scraping or decoding api response)
 1. get the price by Weekend (by scraping or decoding api response)
 
 #### require('michelin')
@@ -153,7 +158,9 @@ Create a module called `michelin` that return the list of restaurant
 ```js
 const michelin = require('michelin');
 
-console.log(michelin.get());
+const starred = michelin.get();
+
+...
 ```
 
 Some things to do:
@@ -175,6 +182,7 @@ Next features:
   * sorting by stars
   * sorting by price
   * sorting by distance
+  
 3. Bonus: Display on a map only Relais & Châteaux with starred restaurants.
 
 ### Notification (bonus)

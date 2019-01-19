@@ -152,7 +152,7 @@ Relais & Châteaux
 ---
 
 1. How it works [relaischateaux.com](https://www.relaischateaux.com)
-2. How to get the list of Hotel + restaurant
+2. How to get the list of `Hotel + restaurant`
 
 ---
 
@@ -192,18 +192,18 @@ Create a module called `castle`
 
 ---
 
-that returns the list of best rate for all Weekends for each Hotel
+that returns the list of best rate for all Weekends for each Property
 
 ---
 
 ```js
 const castle = require('castle');
 ...
-const restaurant = {...};
+const property = {...};
 
 
-castle.getHotels();
-castle.getPrices(restaurant);
+castle.getProperties();
+castle.getPrices(property);
 
 ...
 
@@ -211,7 +211,7 @@ castle.getPrices(restaurant);
 
 ---
 
-1. create the calls (api, http) to get the hotel page
+1. create the calls (api, http) to get the Property page
 1. check if the restaurant is starred.
 
 ---

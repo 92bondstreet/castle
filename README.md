@@ -30,10 +30,9 @@
 
 ## 🐣 Introduction
 
-
 ## 🎯 Objectives
 
-**List the best rates for each Weekend for France located Relais & Châteaux**
+**List the best rates - for each Weekend - for France located Relais & Châteaux with starred restaurants**
 
 ## 🏃‍♀️ Steps to do
 
@@ -83,10 +82,10 @@ Node.js + React + Material Design (mdl, bootstrap, foundation...) + ES6 [+ docke
 
 ### Investigation
 
-#### Hotels from Relais & Châteaux
+#### Properties from Relais & Châteaux
 
 1. How it works https://www.relaischateaux.com ?
-1. How to get the list of Hotel + restaurant
+1. How to get the list of `Hotel + restaurant`
 1. How to identify the restaurant(s) name ?
 1. How to compute the booking price for all weekend ? for a given weekend?
 
@@ -95,13 +94,13 @@ etc ...
 Some things to do:
 
 1. Browse the website
-1. Check how that you can get list of hotels: api etc.... (check network activity)
-1. Check how that you can get list of restaurants for a given hotel: api etc.... (check network activity)
-1. define the JSON schema for Hotel
+1. Check how that you can get list of properties: api etc.... (check network activity)
+1. Check how that you can get list of restaurants for a given property: api etc.... (check network activity)
+1. define the JSON schema for Property
 
 etc ...
 
-Example of Hotel: https://www.relaischateaux.com/fr/france/mercues-lot-mercues
+Example of Property: https://www.relaischateaux.com/fr/france/mercues-lot-mercues
 
 #### Michelin Restaurant
 
@@ -130,23 +129,23 @@ Some things to do:
 
 #### require('castle')
 
-Create a module called `castle` that returns the list of best rates for all Weekends for each Hotel
+Create a module called `castle` that returns the list of best rates for all Weekends for each Property
 
 ```js
 const castle = require('castle');
 ...
-const restaurant = {...};
+const property = {...};
 
 
-const hotels = castle.getHotels();
-const prices = castle.getPrices(restaurant);
+const properties = castle.getProperties();
+const prices = castle.getPrices(property);
 
 ...
 ```
 
 Some things to do:
 
-1. create the calls (api, http) to get the hotel page
+1. create the calls (api, http) to get the Property page
 1. get the restaurants name (by scraping or decoding api response)
 1. check if the restaurant is starred.
 1. get the price by Weekend (by scraping or decoding api response)
@@ -182,7 +181,7 @@ Next features:
   * sorting by stars
   * sorting by price
   * sorting by distance
-  
+
 3. Bonus: Display on a map only Relais & Châteaux with starred restaurants.
 
 ### Notification (bonus)
